@@ -11,7 +11,7 @@ RSpec.describe Place, type: :model do
       expect(file_fixture('place_with_media.csv').read).not_to be_empty
     end
 
-    it 'imports csv with media' do
+    describe 'imports csv with media' do
       fixture_data = file_fixture('place_with_media.csv').read
       described_class.import_csv(fixture_data)
 
